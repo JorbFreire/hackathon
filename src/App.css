@@ -1,3 +1,8 @@
 .App {
   text-align: center;
+  background-color: hotpink;
+}
+.page {
+  min-height: 100%;
+  min-width: 100%;
 }

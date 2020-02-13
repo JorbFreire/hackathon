@@ -1,0 +1,25 @@
+/* ok */
+#LoginPage {
+  background-color: rgb(77, 26, 145);
+  height: 100%;
+}
+
+#LoginPage header {
+  background-color: #3f3d55;
+  height: 62px;
+}
+
+#LoginPage main {
+  min-height: calc(100% - 62px);
+  display: flex;
+  flex-direction: row;
+}
+
+#LoginPage main #LoginCollum {
+  background-color: #ffffff;
+  width: 50%;
+}
+#LoginPage main #RegistrationArtCollum {
+  background-color: #f6f6f6;
+  width: 50%;
+}
