@@ -1,6 +1,4 @@
-/* ok */
 #LoginPage {
-  background-color: rgb(77, 26, 145);
   height: 100%;
 }
 
@@ -19,6 +17,12 @@
   background-color: #ffffff;
   width: 50%;
 }
+
+#LoginPage main #LoginCollum form {
+  display: flex;
+  flex-direction: column;
+}
+
 #LoginPage main #RegistrationArtCollum {
   background-color: #f6f6f6;
   width: 50%;
