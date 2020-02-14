@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import LoginPage from './pages/LoginPage';
+import Routes from './routes.js';
 
 function App() {
   return (
     <div className="App">
-      <LoginPage />
+      <Routes />
     </div>
   );
 }
