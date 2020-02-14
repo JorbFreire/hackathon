@@ -1,11 +1,10 @@
 import React from 'react';
 import './styles.css';
+import HeaderBar from '../../components/HeaderBar';
 
 const LoginPage = () => (
   <div className="page" id="LoginPage">
-    <header>
-      
-    </header>
+    <HeaderBar />
     <main>
       <div id="LoginCollum">
         <h2> Entre na Sua Conta </h2>
