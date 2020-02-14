@@ -8,7 +8,6 @@ const RegistrationPage = () => {
   const [password, setPassword] = useState();
   const [passwordConfirmation, setPasswordConfirmation] = useState();
 
-
   function verifyRegistrationInputs() {
     console.log("verifyRegistrationInputs");
   }
@@ -19,55 +18,56 @@ const RegistrationPage = () => {
   }
   
   return (
-  <div id="RegistrationPage">
-    <HeaderBar />
+    <div id="RegistrationPage">
+      <HeaderBar />
 
-    <h2>Cadastre-se enquanto</h2>
-    <h2>Empresa ou Empregada</h2>
-    
-    <button>Empresa</button>
-    <button>Empregado</button>
+      <h2>Cadastre-se enquanto</h2>
+      <h2>Empresa ou Empregada</h2>
+      
+      <button>Empresa</button>
+      <button>Empregado</button>
 
-    <form onSubmit={handleRegistration}>
-      <label htmlFor="name">Nome</label>
-      <input 
-        type="text"
-        name="name"
-        value={name}
-        onChange={e => {setName(e.target.value)}}
-        required
-      />
+      <form onSubmit={handleRegistration}>
+        <label htmlFor="name">Nome</label>
+        <input 
+          type="text"
+          name="name"
+          value={name}
+          onChange={e => {setName(e.target.value)}}
+          required
+        />
 
-      <label htmlFor="email">Email</label>
-      <input 
-        type="text"
-        name="email"
-        value={email}
-        onChange={e => {setEmail(e.target.value)}}
-        required
-      />
+        <label htmlFor="email">Email</label>
+        <input 
+          type="text"
+          name="email"
+          value={email}
+          onChange={e => {setEmail(e.target.value)}}
+          required
+        />
 
-      <label htmlFor="password">Senha</label>
-      <input 
-        type="password"
-        name="password"
-        value={password}
-        onChange={e => {setPassword(e.target.value)}}
-        required
-      />
+        <label htmlFor="password">Senha</label>
+        <input 
+          type="password"
+          name="password"
+          value={password}
+          onChange={e => {setPassword(e.target.value)}}
+          required
+        />
 
-      <label htmlFor="passwordConfimation">Confirmar Senha</label>
-      <input 
-        type="password"
-        name="passwordConfirmation"
-        value={passwordConfirmation}
-        onChange={e => {setPasswordConfirmation(e.target.value)}}
-        required
-      />
+        <label htmlFor="passwordConfimation">Confirmar Senha</label>
+        <input 
+          type="password"
+          name="passwordConfirmation"
+          value={passwordConfirmation}
+          onChange={e => {setPasswordConfirmation(e.target.value)}}
+          required
+        />
 
-      <button type="submit">Cadastre-se</button>
-    </form>
-  </div>
-)};
+        <button type="submit">Cadastre-se</button>
+      </form>
+    </div>
+  )
+};
 
 export default RegistrationPage;
