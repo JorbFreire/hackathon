@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
+import api from '../../services/api';
 import HeaderBar from '../../components/HeaderBar';
 import './styles.css';
 
@@ -8,30 +10,65 @@ const RegistrationPage = () => {
   const [password, setPassword] = useState();
   const [passwordConfirmation, setPasswordConfirmation] = useState();
 
-  function verifyRegistrationInputs() {
-    console.log("verifyRegistrationInputs");
-  }
+  const [is_owner, setIs_owner] = useState();
 
-  function handleRegistration() {
-    console.log("handleRegistration");
-    alert(`name = ${name}, email = ${email}, password = ${password}, confirmation = ${passwordConfirmation}`);
+  async function handleRegistration(event) {
+    alert("alerta");
+    if (password === passwordConfirmation) {
+      event.preventDefault();
+      const apiResponse = await api.post("/users", {
+        name,
+        email,
+        password,
+        is_owner
+      });
+      console.log(apiResponse);
+    }
+    else {
+      alert("Senhas diferentes");
+      event.preventDefault();
+    }
   }
   
   return (
     <div id="RegistrationPage">
       <HeaderBar />
 
-      <h2>Cadastre-se enquanto</h2>
-      <h2>Empresa ou Empregada</h2>
-      
-      <button>Empresa</button>
-      <button>Empregado</button>
+      <button onClick={ handleRegistration }> debug API </button>
 
-      <form onSubmit={handleRegistration}>
+      <h2>Cadastre-se enquanto</h2>
+      <h2>Empresa ou Empregado</h2>
+      
+      <form onSubmit={ handleRegistration }>
+        <div className="switch">
+          <label >
+            Empresa
+            <input 
+              type="radio"
+              name="is_owner" 
+              value="true"
+              onChange={e => {setIs_owner(true)}}
+              checked={is_owner === true}
+            />
+          </label>
+
+          <label >
+            Empregado
+            <input
+              type="radio"
+              name="is_owner"
+              value="false"
+              onChange={e => {setIs_owner(false)}}
+              checked={is_owner === false}
+            />
+          </label>
+        </div>
+
         <label htmlFor="name">Nome</label>
         <input 
           type="text"
           name="name"
+          id="name"
           value={name}
           onChange={e => {setName(e.target.value)}}
           required
@@ -39,8 +76,9 @@ const RegistrationPage = () => {
 
         <label htmlFor="email">Email</label>
         <input 
-          type="text"
+          type="email"
           name="email"
+          id="email"
           value={email}
           onChange={e => {setEmail(e.target.value)}}
           required
@@ -50,6 +88,7 @@ const RegistrationPage = () => {
         <input 
           type="password"
           name="password"
+          id="password"
           value={password}
           onChange={e => {setPassword(e.target.value)}}
           required
@@ -59,6 +98,7 @@ const RegistrationPage = () => {
         <input 
           type="password"
           name="passwordConfirmation"
+          id="passwordConfirmation"
           value={passwordConfirmation}
           onChange={e => {setPasswordConfirmation(e.target.value)}}
           required
