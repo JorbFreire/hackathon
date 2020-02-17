@@ -58,7 +58,7 @@ const LoginPage = () => {
                 required
               />
     
-              <Link to="/recuperar-senha"> Esqueceu sua senha? </Link>
+              <Link to="/login"> Esqueceu sua senha? </Link>
               <button type="submit"> Entrar </button>
             </form>
           </div>
@@ -66,7 +66,7 @@ const LoginPage = () => {
         <div id="RegistrationArtCollum">
           <div className="action">
             <h2>Ainda não possui uma conta? </h2>
-            <button>Cadastre-se </button>
+            <Link to="/registration"> <button>Cadastre-se</button> </Link>
           </div>
           <div id="artBlock">
             <img src={ LoginScreenArt1 } alt=""/>

@@ -18,8 +18,7 @@ main #RegistrationArtCollum #artBlock {
   height: 80%;
 }
 
-
-main #RegistrationArtCollum .action button{
+#RegistrationArtCollum .action a button{
   width: 263px;
   height: 56px;
 
