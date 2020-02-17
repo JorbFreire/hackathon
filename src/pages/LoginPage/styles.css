@@ -8,12 +8,6 @@
   flex-direction: row;
 }
 
-@media screen and (max-width: 1416px) {
-  h2 {
-    font-size: 38px;
-  }
-}
-
 @media screen and (max-width: 722px) {
   /* LoginBlock */
   #LoginPage main {
