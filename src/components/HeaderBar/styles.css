@@ -1,4 +1,10 @@
 header {
   background-color: #3f3d55;
-  height: 62px;
+  height: 100px;
+}
+
+@media screen and (max-width: 722px) {
+  header {
+    height: 60px;
+  }
 }

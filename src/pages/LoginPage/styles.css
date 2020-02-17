@@ -3,22 +3,34 @@
 }
 
 #LoginPage main {
-  min-height: calc(100% - 62px);
+  min-height: calc(100% - 100px);
   display: flex;
   flex-direction: row;
 }
 
-#LoginPage main #LoginCollum {
-  background-color: #ffffff;
-  width: 50%;
+@media screen and (max-width: 1416px) {
+  h2 {
+    font-size: 38px;
+  }
 }
 
-#LoginPage main #LoginCollum form {
-  display: flex;
-  flex-direction: column;
-}
+@media screen and (max-width: 722px) {
+  /* LoginBlock */
+  #LoginPage main {
+    flex-direction: column;
+  }
+  #LoginPage main #LoginCollum {
+    width: 100%;
+  }
+  #LoginCollum .form-box form{
+    align-items: center;
+  }
+  .form-box form button {
+    margin-bottom: 125px;
+  }
 
-#LoginPage main #RegistrationArtCollum {
-  background-color: #f6f6f6;
-  width: 50%;
+  /* RegistrationBlock */
+  #LoginPage main #RegistrationArtCollum {
+    width: 100%;
+  }
 }

@@ -34,8 +34,6 @@ const RegistrationPage = () => {
     <div id="RegistrationPage">
       <HeaderBar />
 
-      <button onClick={ handleRegistration }> debug API </button>
-
       <h2>Cadastre-se enquanto</h2>
       <h2>Empresa ou Empregado</h2>
       

@@ -1,0 +1,32 @@
+#LoginPage main #RegistrationArtCollum {
+  --padding-var: 38px;
+
+  background-color: #f6f6f6;
+  width: 50%;
+}
+
+main #RegistrationArtCollum #artBlock {
+  min-width: 283,5px;
+  min-height: 209px;
+
+  max-width: 586px;
+  max-height: 352,47px;
+}
+
+#RegistrationArtCollum #artBlock img {
+  width: 80%;
+  height: 80%;
+}
+
+
+main #RegistrationArtCollum .action button{
+  width: 263px;
+  height: 56px;
+
+  margin-top: 35px;
+  margin-bottom: 33px;
+}
+main #RegistrationArtCollum .action {
+  margin-left: 10%;
+  margin-right: 10%;
+}

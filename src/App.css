@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background-color: hotpink;
+  background-color: #fff;
+  color: #7E7E7E;
+  font-size: 20px;
 }
 .page {
   min-height: 100%;
@@ -16,4 +18,15 @@ button {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
+}
+
+h2 {
+  font-size: 41px; /* 30px pra mobile */
+  max-width: 100%;
+  font-weight: bold;
+}
+input {
+  background-color: #D9D9D9;
+  border: 0;
+  border-radius: 6px;
 }
