@@ -38,14 +38,16 @@ const Display = () => {
     <>
       <HeaderBar />
       <AppMemberMenu />
-      <button onClick={() => {
-        console.log(workersList);
-      }}> debug api</button>
-      {workersList.forEach(element => (
-        <div className="user">
-          <p>{element.name}</p>
-        </div>
-      ))}
+      <div className="usersList">
+        {workersList.map(element => (
+          <div className="user">
+            <h2>{element.name}</h2>
+            <h4>{element.learning}</h4>
+            <h4>{element.productivity}</h4>
+            <h4>{element.acuaity}</h4>
+          </div>
+        ))}
+      </div>
     </>
   );
 } 
