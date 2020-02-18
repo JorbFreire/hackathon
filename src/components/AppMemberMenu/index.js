@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 const AppMemberMenu = () => (
   <>
     <menu>
-      <p>Display</p>
-      <p>Treinamento</p>
-      <p>Perguntas</p>
+      <Link to="/display">Display</Link>
+      <Link to="/courses">Treinamento</Link>
+      <Link to="/goals">Perguntas</Link>
     </menu>
   </>
 );

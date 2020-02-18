@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import 'styles.css';
+import './styles.css';
 
 const Courses = () => {
-  const [coursesList, setCoursesList] = useState();
+  const [coursesList, setCoursesList] = useState([]);
   return (
     <div className="TrainingPage">
       <div className="listBlock">
@@ -10,10 +10,10 @@ const Courses = () => {
         <ul>
           <li></li>
           {coursesList.map(element => (
-          <div className="course">
-            <p>{element}</p>
-          </div>
-        ))}
+            <div className="course">
+              <p>{element}</p>
+            </div>
+          ))}
         </ul>
       </div>
     </div>
