@@ -10,7 +10,7 @@ import LoginPage from './pages/LoginPage';
 import RegistrationPage from './pages/RegistrationPage';
 
 import Display from './pages/Display';  //use company_ID
-import UserGeneralData from './pages/UserGeneralData';  //use user_ID
+import UserGeneralData from './pages/Display/UserGeneralData';  //use user_ID
 
 import Courses from './pages/Courses';
 import Goals from './pages/Goals';
