@@ -18,6 +18,8 @@ import Goals from './pages/Goals';
 const Routes = () => (
   <BrowserRouter >
     <Switch>
+      <Route exact path="/" component={Display}/>
+
       <Route path="/login"component={LoginPage} />
       <Route path="/registration"component={RegistrationPage} />
 
