@@ -3,6 +3,30 @@
 }
 .usersList .user {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin-bottom: 43px;
 }
 
+.usersList .user img{
+  width: 116px;
+}
 
+.usersList .user .numbers  {
+  min-width: 342px;
+  max-width: 90%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.user .numbers p {
+  text-align: right;
+}
+
+.user .numbers p strong {
+  text-align: left;
+}

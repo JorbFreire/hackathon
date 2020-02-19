@@ -26,6 +26,10 @@ h2 {
   max-width: 100%;
   font-weight: bold;
 }
+h3 {
+  font-size: 32px; /* 30px pra mobile */
+  max-width: 100%;
+}
 input {
   background-color: #D9D9D9;
   border: 0;
@@ -39,16 +43,25 @@ label {
   h2 {
     font-size: 38px;
   }
+  h3 {
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 1340px) {
   h2 {
     font-size: 34px;
   }
+  h3 {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 722px) {
   h2 {
     font-size: 30px;
+  }
+  h3 {
+    font-size: 16px;
   }
 }

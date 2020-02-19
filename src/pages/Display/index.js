@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import HeaderBar from '../../components/HeaderBar';
 import AppMemberMenu from '../../components/AppMemberMenu';
+
+import staticIcon from '../../assets/staticIcon.png';
 import './styles.css';
 
 const Display = () => {
@@ -10,21 +12,21 @@ const Display = () => {
   function findWorkersForThisCompany() {
     setWorkersList([{
       name: "this is my name1",
-      learning: "this is how much I learned",
-      productivity: "this is how much I work",
-      acuaity: "this is how much time I speend on work",
+      learning: 7,
+      productivity: 9,
+      acuaity: 8,
     },
     {
       name: "this is my name2",
-      learning: "this is how much I learned",
-      productivity: "this is how much I work",
-      acuaity: "this is how much time I speend on work",
+      learning: 7,
+      productivity: 9,
+      acuaity: 8,
     },
     {
       name: "this is my name3",
-      learning: "this is how much I learned",
-      productivity: "this is how much I work",
-      acuaity: "this is how much time I speend on work",
+      learning: 7,
+      productivity: 9,
+      acuaity: 8,
     },]);
     console.log(workersList);
 
@@ -41,10 +43,13 @@ const Display = () => {
       <div className="usersList">
         {workersList.map(element => (
           <div className="user">
-            <h2>{element.name}</h2>
-            <h4>{element.learning}</h4>
-            <h4>{element.productivity}</h4>
-            <h4>{element.acuaity}</h4>
+            <h3>{element.name}</h3>
+            <img src={staticIcon} />
+            <div className="numbers">
+              <p><strong>Satisfação: </strong>{element.learning}</p>
+              <p><strong>Produtividade: </strong>{element.productivity}</p>
+              <p><strong>Presenças </strong>{element.acuaity}</p>
+            </div>
           </div>
         ))}
       </div>

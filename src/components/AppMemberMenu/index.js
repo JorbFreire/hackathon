@@ -4,10 +4,10 @@ import './styles.css'
 
 const AppMemberMenu = () => (
   <>
-    <menu>
+    <menu className="memberNavigation">
       <Link to="/display">Display</Link>
       <Link to="/courses">Treinamento</Link>
-      <Link to="/goals">Perguntas</Link>
+      <Link to="/goals">Metas</Link>
     </menu>
   </>
 );
